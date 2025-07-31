@@ -4,11 +4,46 @@ A Textual widget for a simple slider.
 
 ![screenshot](https://raw.githubusercontent.com/TomJGooding/textual-slider/main/assets/screenshot.png)
 
+## Demo App
+
+if you have either `uv` or `pipx` install, you can immediately try one of the examples straight from your terminal:
+
+### RGB sliders
+```sh
+uvx --from git+https://github.com/TomJGooding/textual-slider.git -q rgb-sliders
+```
+
+```sh
+pipx run --spec git+https://github.com/TomJGooding/textual-slider.git -q rgb-sliders
+```
+
+### Step sliders
+```sh
+uvx --from git+https://github.com/TomJGooding/textual-slider.git -q steps-sliders
+```
+
+```sh
+pipx run --spec git+https://github.com/TomJGooding/textual-slider.git -q steps-sliders
+```
+
+### Spinal tap sliders
+```sh
+uvx --from git+https://github.com/TomJGooding/textual-slider.git -q spinal-tap-sliders
+```
+
+```sh
+pipx run --spec git+https://github.com/TomJGooding/textual-slider.git -q spinal-tap-sliders
+```
+
 ## Installation
 
-Install textual-slider using pip:
-
+Install textual-slider using uv:
+```sh
+uv add textual-slider
 ```
+
+Install textual-slider using pip:
+```sh
 pip install textual-slider
 ```
 
