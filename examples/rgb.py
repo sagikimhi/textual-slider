@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from textual import on
 from textual.app import App, ComposeResult
 from textual.color import Color
@@ -49,6 +51,13 @@ class RgbSlidersApp(App):
         self.title = f"RGB {red} {green} {blue}"
 
 
-if __name__ == "__main__":
+def main() -> int:
     app = RgbSlidersApp()
     app.run()
+    return app.return_code
+
+
+if __name__ == "__main__":
+    import sys
+
+    sys.exit(main())

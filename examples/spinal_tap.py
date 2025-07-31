@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from textual import on
 from textual.app import App, ComposeResult
 from textual.containers import Center, Vertical
@@ -25,7 +27,9 @@ class SpinalTapApp(App):
     def compose(self) -> ComposeResult:
         with Vertical():
             yield Center(
-                Label('"Why don\'t you just make ten louder?"', classes="quote")
+                Label(
+                    '"Why don\'t you just make ten louder?"', classes="quote"
+                )
             )
             yield Center(Slider(min=0, max=10, value=10, id="normal-amp"))
             yield Center(Label(id="normal-amp-label"))
@@ -55,6 +59,13 @@ class SpinalTapApp(App):
         tufnel_amp_label.update(str(event.value))
 
 
-if __name__ == "__main__":
+def main() -> int:
     app = SpinalTapApp()
     app.run()
+    return app.return_code
+
+
+if __name__ == "__main__":
+    import sys
+
+    sys.exit(main())
